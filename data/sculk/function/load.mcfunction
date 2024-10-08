@@ -1,1 +1,1 @@
-scoreboard objectives add sculkside dummy
+scoreboard objectives add sculk_direction dummy
