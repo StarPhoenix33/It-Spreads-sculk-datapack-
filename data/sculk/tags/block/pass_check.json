@@ -11,7 +11,7 @@
     "#fire",
     "#crops",
     "#saplings",
-    "#signs",
+    "#all_signs",
     "#climbable",
     "seagrass",
     "tall_seagrass",
@@ -42,5 +42,10 @@
     "snow",
     "repeater",
     "comparator",
-    "#trapdoors"
+    "#trapdoors",
+    "#fences",
+    "#doors",
+    "#flower_pots",
+    "#leaves",
+    "sculk_vein"
 ]}

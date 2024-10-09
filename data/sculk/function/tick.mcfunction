@@ -1,1 +1,1 @@
-execute as @e[tag=sculkgrowth] at @s run function sculk:spread/tick
+execute as @e[tag=sculkgrowth] at @s run function sculk:spread/grow_tick
