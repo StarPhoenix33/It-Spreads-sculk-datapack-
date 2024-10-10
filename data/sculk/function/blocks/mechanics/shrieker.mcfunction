@@ -1,0 +1,1 @@
+execute unless block ~ ~ ~ sculk_shrieker run kill @s
