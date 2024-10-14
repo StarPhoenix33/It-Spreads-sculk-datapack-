@@ -11,7 +11,7 @@ execute if block ~ ~ ~ #leaves run setblock ~ ~ ~ warped_wart_block replace
 # Sculk
 execute if block ~ ~ ~ #sculk:infectable run setblock ~ ~ ~ sculk replace
 
-# Sculk Veins
+# Sculk Vein
 execute if entity @s[tag=spawnvein] run setblock ~ ~1 ~ sculk_vein[down=true] keep
 tag @s remove spawnvein
 
