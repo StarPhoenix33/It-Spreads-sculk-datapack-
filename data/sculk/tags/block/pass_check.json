@@ -47,5 +47,7 @@
     "#doors",
     "#flower_pots",
     "#leaves",
-    "sculk_vein"
+    "sculk_vein",
+    "sculk_sensor",
+    "sculk_shrieker"
 ]}
