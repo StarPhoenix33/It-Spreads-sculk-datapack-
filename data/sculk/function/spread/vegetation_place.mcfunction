@@ -14,6 +14,6 @@ execute if score @s temp matches 89..90 run setblock ~ ~ ~ pointed_dripstone[ver
 # Twisting Vines
 execute if score @s temp matches 91..100 run setblock ~ ~ ~ twisting_vines_plant keep
 
-execute unless entity @s[tag=corruptplant] if predicate sculk:place_attept_chance_stuck run scoreboard players remove @s[scores={sculk_steps=1..}] sculk_steps 1
+execute unless entity @s[tag=corruptplant] if predicate sculk:50_perc_chance run scoreboard players remove @s[scores={sculk_steps=1..}] sculk_steps 1
 tag @s remove spawnvein
 tag @s remove corruptplant
