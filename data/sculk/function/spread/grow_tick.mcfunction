@@ -7,7 +7,7 @@ execute unless entity @s[tag=burrow] unless block ~ ~ ~ #sculk:sculk_variants un
 execute store result storage sculk:hivemind turn int 1 run random value -60..60
 function sculk:spread/turn with storage sculk:hivemind
 
-execute if predicate sculk:spread_chance run tp @s ~ ~ ~ facing entity @r[distance=..1,gamemode=!spectator]
+#execute if predicate sculk:spread_chance run tp @s ~ ~ ~ facing entity @r[distance=..1,gamemode=!spectator]
 execute at @s run tp @s ~ ~ ~ ~ 0
 
 # Sweep for infectable blocks & tp to valid ones
@@ -23,6 +23,10 @@ execute if score @s sculk_stuck matches 4.. run tag @s add sculkstuck
 
 # INFECT
 execute at @s[tag=infect] align xyz positioned ~0.5 ~0.5 ~0.5 run function sculk:spread/infect
+
+# Sweep Swap
+execute if predicate sculk:sweep_swap_chance run tag @s[tag=invertedsweep] remove invertedsweep
+execute if predicate sculk:sweep_swap_chance run tag @s[tag=!invertedsweep] add invertedsweep
 
 # Burrow 
 execute at @s[tag=burrow] run function sculk:spread/burrow_check

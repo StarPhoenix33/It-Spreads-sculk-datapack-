@@ -1,5 +1,10 @@
 {"values": [
     "#air",
     "sculk_vein",
-    "snow"
+    "snow",
+    "short_grass",
+    "tall_grass",
+    "nether_sprouts",
+    "crimson_roots",
+    "warped_roots"
 ]}

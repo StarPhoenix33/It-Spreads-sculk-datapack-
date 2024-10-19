@@ -5,7 +5,6 @@
     "spore_blossom",
     "#bee_growables",
     "#combination_step_sound_blocks",
-    "#inside_step_sound_blocks",
     "#corals",
     "small_dripleaf",
     "#fire",
@@ -49,5 +48,14 @@
     "#leaves",
     "sculk_vein",
     "sculk_sensor",
-    "sculk_shrieker"
+    "sculk_shrieker",
+    "twisting_vines",
+    "twisting_vines_plant",
+    "#impermeable",
+    "sea_pickle",
+    "#corals",
+    "glow_lichen",
+    "lily_pad",
+    "pink_petals",
+    "#sculk:glass_panes"
 ]}
