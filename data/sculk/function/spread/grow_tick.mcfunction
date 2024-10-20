@@ -4,7 +4,8 @@ execute as @s[tag=sculkstuck] unless predicate sculk:spread_chance_stuck run ret
 execute unless entity @s[tag=burrow] unless block ~ ~ ~ #sculk:sculk_variants unless block ~ ~ ~ #sculk:infectable run scoreboard players set @s sculk_steps 0
 
 # Turn randomly
-execute store result storage sculk:hivemind turn int 1 run random value -60..60
+execute if entity @s[tag=!sculkstuck] store result storage sculk:hivemind turn int 1 run random value -75..75
+execute if entity @s[tag=sculkstuck] store result storage sculk:hivemind turn int 1 run random value -60..60
 function sculk:spread/turn with storage sculk:hivemind
 
 #execute if predicate sculk:spread_chance run tp @s ~ ~ ~ facing entity @r[distance=..1,gamemode=!spectator]

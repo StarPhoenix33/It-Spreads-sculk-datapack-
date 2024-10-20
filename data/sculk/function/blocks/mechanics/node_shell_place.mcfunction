@@ -1,0 +1,3 @@
+execute positioned ^ ^ ^0.55 if block ~ ~ ~ #sculk:node_shell_replaceable unless block ~ ~ ~ sculk_catalyst run setblock ~ ~ ~ sculk replace
+execute positioned ^ ^ ^1.55 if block ~ ~ ~ #sculk:node_shell_replaceable unless block ~ ~ ~ sculk_catalyst run setblock ~ ~ ~ warped_wart_block replace
+execute positioned ^ ^ ^2.55 if block ~ ~ ~ #sculk:node_shell_replaceable unless block ~ ~ ~ sculk_catalyst run setblock ~ ~ ~ warped_hyphae replace

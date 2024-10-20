@@ -24,4 +24,7 @@ execute if block ~ ~ ~ #sculk:infectable run setblock ~ ~ ~ sculk replace
 execute if block ~ ~ ~ sculk if block ~ ~1 ~ #sculk:growth_replaceable positioned ~ ~1 ~ run function sculk:spread/growth_place
 
 # Sculk Vein/Vegetation
-execute if entity @s[tag=spawnvein] positioned ~ ~1 ~ run function sculk:spread/vegetation_place
+execute if entity @s[tag=spawnvein,tag=corruptplant] if predicate sculk:50_perc_chance positioned ~ ~1 ~ run function sculk:spread/vegetation_place
+execute if entity @s[tag=spawnvein,tag=!corruptplant] positioned ~ ~1 ~ run function sculk:spread/vegetation_place
+tag @s remove spawnvein
+tag @s remove corruptplant
