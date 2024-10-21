@@ -12,6 +12,6 @@ execute at @s[tag=sculkstuck] if block ~ ~ ~ #sculk:infectable run tag @s remove
 
 # Particles and Sounds
 execute at @s run particle sculk_charge{roll:0} ~ ~0.6 ~ 0.3 0.1 0.3 0 3 force @a
-execute at @s run particle sculk_charge{roll:3.141592659589793238462643} ~ ~-0.6 ~ 0.3 0.1 0.3 0 3 force @a
+execute at @s run particle sculk_charge{roll:3.1415926595897932384626433} ~ ~-0.6 ~ 0.3 0.1 0.3 0 3 force @a
 execute at @s[tag=!sculkstuck] run playsound block.sculk.spread block @a[distance=..100] ~ ~ ~ 1 0.8
 execute at @s[tag=sculkstuck] run playsound block.sculk.charge block @a[distance=..100] ~ ~ ~ 0.3 1

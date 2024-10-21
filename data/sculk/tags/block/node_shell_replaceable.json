@@ -1,6 +1,7 @@
 {"values": [
     "#sculk:sculk_variants",
     "#sculk:sculk_vegetation_replaceable",
+    "#sculk:infectable",
     "#replaceable",
     "spore_blossom",
     "#bee_growables",
