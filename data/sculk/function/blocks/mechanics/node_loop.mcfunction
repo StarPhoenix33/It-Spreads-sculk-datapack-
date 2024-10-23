@@ -5,8 +5,8 @@ execute if predicate sculk:spread_chance run function sculk:blocks/place/spawn_t
 
 # Bloom (spawn tendrils)
 scoreboard players operation @s temp = @s node_stage
-scoreboard players add @s temp 1
-execute store result score .random HIVEMIND run random value 1..20
+scoreboard players add @s temp 3
+execute store result score .random HIVEMIND run random value 1..30
 execute if score @s temp >= .random HIVEMIND run function sculk:blocks/mechanics/node_bloom
 
 
