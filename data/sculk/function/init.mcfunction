@@ -1,5 +1,5 @@
 # Sculk Node
-execute as @s[tag=node] run function sculk:init/node
+execute as @s[tag=node] align xyz positioned ~0.5 ~0.5 ~0.5 run function sculk:init/node
 
 # Sculk growth tendril
 execute as @s[tag=tendril] run function sculk:init/tendril

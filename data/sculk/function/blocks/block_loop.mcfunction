@@ -1,5 +1,5 @@
-
-
+# Node
+execute if entity @s[tag=node] run function sculk:blocks/mechanics/node_loop
 
 
 

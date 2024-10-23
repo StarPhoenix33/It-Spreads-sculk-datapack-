@@ -1,4 +1,9 @@
-execute positioned ^ ^ ^2.6 if predicate sculk:50_perc_chance if block ~ ~ ~ #sculk:node_shell_replaceable unless block ~ ~ ~ sculk_catalyst run setblock ~ ~ ~ warped_hyphae replace
-execute positioned ^ ^ ^1.7 if predicate sculk:50_perc_chance if block ~ ~ ~ #sculk:node_shell_replaceable unless block ~ ~ ~ sculk_catalyst run setblock ~ ~ ~ warped_wart_block replace
-execute positioned ^ ^ ^0.6 if predicate sculk:50_perc_chance if block ~ ~ ~ #sculk:node_shell_replaceable unless block ~ ~ ~ sculk_catalyst run setblock ~ ~ ~ sculk replace
+# Layer 3
+execute if score @s node_stage matches 6.. positioned ^ ^ ^2.6 if predicate sculk:50_perc_chance if block ~ ~ ~ #sculk:node_shell_replaceable run function sculk:blocks/mechanics/shell_layer_3
+
+# Layer 2
+execute if score @s node_stage matches 4.. positioned ^ ^ ^1.7 if predicate sculk:50_perc_chance if block ~ ~ ~ #sculk:node_shell_replaceable run function sculk:blocks/mechanics/shell_layer_2
+
+# Layer 1
+execute if score @s node_stage matches 2.. positioned ^ ^ ^0.55 if predicate sculk:50_perc_chance if block ~ ~ ~ #sculk:node_shell_replaceable run function sculk:blocks/mechanics/shell_layer_1
 

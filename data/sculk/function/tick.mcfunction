@@ -1,4 +1,4 @@
-execute as @e[tag=sculk,tag=s_tick] at @s run function sculk:blocks/block_tick
+execute as @e[tag=sculk,tag=s_tick,tag=s_init] at @s run function sculk:blocks/block_tick
 execute as @e[tag=sculk,tag=!s_init] at @s run function sculk:init
 
 # Tendril

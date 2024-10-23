@@ -1,1 +1,0 @@
-function sculk:blocks/mechanics/node_shell

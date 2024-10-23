@@ -2,6 +2,10 @@
 execute if block ~ ~ ~ #sculk:infectable run scoreboard players remove @s[scores={sculk_steps=1..}] sculk_steps 1
 execute at @s[tag=sculkstuck] if block ~ ~ ~ #sculk:sculk_variants if predicate sculk:sculk_step_chance_stuck run scoreboard players remove @s[scores={sculk_steps=1..}] sculk_steps 1
 
+# Add Sculk Mass
+execute if block ~ ~ ~ #sculk:infectable run function sculk:spread/node_infection_report with entity @s data.node
+execute if block ~ ~ ~ #sculk:infectable run scoreboard players add .mass HIVEMIND 1
+
 # Place sculk
 execute if block ~ ~ ~ #sculk:infectable run function sculk:spread/place
 execute at @s[tag=sculkstuck] if block ~ ~ ~ #sculk:sculk_variants if predicate sculk:place_attept_chance_stuck run function sculk:spread/place
