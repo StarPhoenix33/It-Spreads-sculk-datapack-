@@ -1,0 +1,1 @@
+$execute positioned $(x) $(y) $(z) unless entity @n[tag=sculk,tag=node,distance=..1] run scoreboard players set @s sculk_steps 0

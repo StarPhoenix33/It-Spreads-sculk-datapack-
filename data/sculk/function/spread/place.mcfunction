@@ -8,7 +8,7 @@ execute if entity @s[tag=spawnvein] run setblock ~ ~1 ~ air
 execute if block ~ ~ ~ #logs_that_burn run setblock ~ ~ ~ warped_hyphae replace
 
 # Destroy Leaves
-execute if block ~ ~ ~ warped_hyphae run function sculk:spread/destroy_leaves
+function sculk:spread/destroy_leaves
 
 # Tree Extension
 execute if entity @s[tag=sculkstuck] if block ~ ~ ~ warped_hyphae if predicate sculk:tree_extension_chance positioned ^ ^ ^1 if block ~ ~ ~ #replaceable run function sculk:spread/tree_extension

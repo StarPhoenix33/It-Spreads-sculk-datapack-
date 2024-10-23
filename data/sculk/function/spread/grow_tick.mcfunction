@@ -33,7 +33,6 @@ execute if predicate sculk:sweep_swap_chance run tag @s[tag=!invertedsweep] add 
 execute at @s[tag=burrow] run function sculk:spread/burrow_check
 
 # End Conditions
-execute if score @s sculk_timer matches ..0 run scoreboard players set @s sculk_steps 0
 execute at @s unless block ~ ~ ~ #sculk:sculk_variants unless block ~ ~ ~ #sculk:infectable run scoreboard players set @s sculk_steps 0
 kill @s[scores={sculk_steps=..0}]
 
