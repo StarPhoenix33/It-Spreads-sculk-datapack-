@@ -1,7 +1,7 @@
 # Sculk veins detection
 execute if block ~ ~1 ~ #sculk:sculk_vegetation_replaceable run tag @s add spawnvein
 execute if block ~ ~1 ~ #sculk:sculk_vegetation_replaceable run tag @s add corruptplant
-execute if block ~ ~ ~ sculk positioned ~ ~1 ~ if block ~ ~ ~ #sculk:growth_replaceable if predicate sculk:spread_chance unless entity @n[tag=sculk,tag=!tendril,distance=..1.5] run tag @s add spawnvein
+execute if block ~ ~ ~ sculk positioned ~ ~1 ~ if block ~ ~ ~ #sculk:growth_replaceable if predicate sculk:vegetation_place_chance unless entity @n[tag=sculk,tag=!tendril,distance=..1.5] run tag @s add spawnvein
 execute if entity @s[tag=spawnvein] run setblock ~ ~1 ~ air
 
 # Warped Wood

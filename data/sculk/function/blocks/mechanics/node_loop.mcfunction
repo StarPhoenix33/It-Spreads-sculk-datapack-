@@ -11,4 +11,4 @@ execute if score @s temp >= .random HIVEMIND run function sculk:blocks/mechanics
 
 
 # Heartbeat
-#playsound entity.warden.heartbeat block @a[distance=..100] ~ ~ ~ 1 1
+playsound entity.warden.heartbeat block @a[distance=..100] ~ ~ ~ 2 1
