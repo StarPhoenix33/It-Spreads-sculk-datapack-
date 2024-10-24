@@ -1,6 +1,6 @@
 tag @s add sculkstuck
 tag @s add burrow
-execute store result score @s sculk_steps run random value 10..30
+execute store result score @s sculk_steps run random value 10..20
 scoreboard players set @s sculk_stuck 0
 scoreboard players set @s sculk_timer 120
 execute store result score @s sculk_direction run random value 1..8

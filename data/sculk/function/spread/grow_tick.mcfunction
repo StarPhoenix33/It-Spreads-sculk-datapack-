@@ -34,6 +34,6 @@ execute at @s[tag=burrow] run function sculk:spread/burrow_check
 
 # End Conditions
 execute at @s unless block ~ ~ ~ #sculk:sculk_variants unless block ~ ~ ~ #sculk:infectable run scoreboard players set @s sculk_steps 0
-kill @s[scores={sculk_steps=..0}]
+execute at @s[scores={sculk_steps=..0}] run function sculk:delete
 
 tag @s remove infect
