@@ -5,4 +5,4 @@ execute if predicate sculk:place_attept_chance_stuck run setblock ~ ~ ~ warped_w
 function sculk:spread/destroy_leaves
 
 scoreboard players remove @s[scores={sculk_steps=1..}] sculk_steps 1
-
+scoreboard players add .mass HIVEMIND 1

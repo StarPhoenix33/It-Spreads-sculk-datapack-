@@ -1,7 +1,8 @@
 # Node
 execute if entity @s[tag=node] run function sculk:blocks/mechanics/node_loop
 
-
+# Sensor
+execute if entity @s[tag=sensor] if predicate sculk:sensor_passive_mass_chance run scoreboard players add .mass HIVEMIND 1
 
 
 # Delete Conditions

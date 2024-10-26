@@ -8,7 +8,7 @@ execute if entity @s[tag=spawnvein] run setblock ~ ~1 ~ air
 execute if block ~ ~ ~ #logs_that_burn run setblock ~ ~ ~ warped_hyphae replace
 
 # Destroy Leaves
-function sculk:spread/destroy_leaves
+execute if block ~ ~ ~ warped_hyphae run function sculk:spread/destroy_leaves
 
 # Tree Extension
 execute if entity @s[tag=sculkstuck] if block ~ ~ ~ warped_hyphae if predicate sculk:tree_extension_chance positioned ^ ^ ^1 if block ~ ~ ~ #replaceable run function sculk:spread/tree_extension
@@ -23,8 +23,12 @@ execute if block ~ ~ ~ #sculk:infectable run setblock ~ ~ ~ sculk replace
 # Sculk Growth
 execute if block ~ ~ ~ sculk if block ~ ~1 ~ #sculk:growth_replaceable positioned ~ ~1 ~ run function sculk:spread/growth_place
 
+# Sculk Node
+execute if score @s sculk_steps matches 0 if predicate sculk:node_chance if block ~ ~ ~ sculk if block ~ ~1 ~ #sculk:growth_replaceable positioned ~ ~1 ~ unless entity @n[tag=sculk,tag=node,distance=..60] run function sculk:blocks/place/node
+
 # Sculk Vein/Vegetation
 execute if entity @s[tag=spawnvein,tag=corruptplant] if predicate sculk:50_perc_chance positioned ~ ~1 ~ run function sculk:spread/vegetation_place
 execute if entity @s[tag=spawnvein,tag=!corruptplant] positioned ~ ~1 ~ run function sculk:spread/vegetation_place
 tag @s remove spawnvein
 tag @s remove corruptplant
+
