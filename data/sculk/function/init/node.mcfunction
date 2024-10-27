@@ -6,3 +6,5 @@ particle sonic_boom ~ ~ ~ 0 0 0 1 1 force @a
 scoreboard players set @s node_stage 1
 scoreboard players set @s sculk_direction 0
 scoreboard players set @s infected_blocks 0
+
+scoreboard players add .nodecount HIVEMIND 1

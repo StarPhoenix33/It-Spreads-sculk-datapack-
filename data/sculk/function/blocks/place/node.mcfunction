@@ -1,6 +1,11 @@
-# Mass
-execute unless score .mass HIVEMIND matches 300.. run return fail
-scoreboard players remove .mass HIVEMIND 100
+# MASS (Multiplied cost)
+scoreboard players operation @s temp = .nodecount HIVEMIND
+scoreboard players operation @s temp *= #500 temp
+execute unless score .mass HIVEMIND >= @s temp run return fail
+
+scoreboard players operation @s temp = .nodecount HIVEMIND
+scoreboard players operation @s temp *= #200 temp
+scoreboard players operation .mass HIVEMIND -= @s temp
 
 # Spawn Node
 summon minecraft:marker ~ ~ ~ {Tags:["sculk","node","s_tick"]}

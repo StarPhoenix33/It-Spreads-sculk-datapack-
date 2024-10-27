@@ -4,9 +4,11 @@
     "#planks",
     "#wool",
     "cobblestone",
+    "mossy_cobblestone",
     "stone_bricks",
     "mossy_stone_bricks",
     "cracked_stone_bricks",
     "farmland",
+    "dirt_path",
     "obsidian"
 ]}

@@ -1,3 +1,4 @@
+execute if score .nodecount HIVEMIND matches 1.. run scoreboard players remove .nodecount HIVEMIND 1
 
 particle sculk_soul ~ ~ ~ 0 0 0 0.5 50 force @a
 

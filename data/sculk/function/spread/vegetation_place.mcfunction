@@ -4,7 +4,7 @@ execute store result score @s temp run random value 1..100
 execute if score @s temp matches 1..88 run setblock ~ ~ ~ sculk_vein[down=true] keep
 
 # Twisting Vines
-execute unless entity @n[tag=sculk,tag=node,distance=..10] if score @s temp matches 89..93 run setblock ~ ~ ~ twisting_vines_plant keep
+execute unless entity @n[tag=sculk,tag=node,distance=..10] if score @s temp matches 89..93 run setblock ~ ~ ~ twisting_vines keep
 
 # Nether Sprouts
 execute if score @s temp matches 94..96 run setblock ~ ~ ~ nether_sprouts keep
