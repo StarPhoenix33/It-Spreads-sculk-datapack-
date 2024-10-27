@@ -17,7 +17,7 @@ execute if block ~ ~ ~ #sculk:infectable run function sculk:spread/place
 execute at @s[tag=sculkstuck] if block ~ ~ ~ #sculk:sculk_variants if predicate sculk:place_attept_chance_stuck run function sculk:spread/place
 
 # Tendril Split
-execute at @s[tag=!sculkstuck,scores={sculk_steps=..0}] if predicate sculk:tendril_split_chance run function sculk:spread/tendril_split with entity @s data.node
+execute at @s[tag=!sculkstuck,scores={sculk_steps=..0}] if predicate sculk:tendril_split_chance unless entity @n[tag=sculk,tag=node,distance=..15] run function sculk:spread/tendril_split with entity @s data.node
 
 # Particles and Sounds
 particle sculk_charge{roll:0} ~ ~0.575 ~ 0.25 0.03 0.25 0 3 normal @a
