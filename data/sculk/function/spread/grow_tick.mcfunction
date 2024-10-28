@@ -5,11 +5,8 @@ execute unless entity @s[tag=burrow] unless block ~ ~ ~ #sculk:sculk_variants un
 
 # Turn randomly
 execute if entity @s[tag=!sculkstuck] store result storage sculk:hivemind turn int 1 run random value -75..75
-execute if entity @s[tag=sculkstuck] store result storage sculk:hivemind turn int 1 run random value -50..50
+execute if entity @s[tag=sculkstuck] store result storage sculk:hivemind turn int 1 run random value -60..60
 function sculk:spread/turn with storage sculk:hivemind
-
-#execute if predicate sculk:spread_chance run tp @s ~ ~ ~ facing entity @r[distance=..1,gamemode=!spectator]
-execute at @s run tp @s ~ ~ ~ ~ 0
 
 # Sweep for infectable blocks & tp to valid ones
 execute at @s[tag=!invertedsweep] run function sculk:spread/sweep {"a":"","b":"-"}
@@ -20,7 +17,7 @@ execute at @s[tag=!infect,tag=!sculkstuck] run scoreboard players add @s sculk_s
 execute at @s align xyz run tp @s ~0.5 ~0.5 ~0.5 ~ 0
 
 # Sculkstuck
-execute if score @s sculk_stuck matches 4.. run tag @s add sculkstuck
+execute if score @s sculk_stuck matches 6.. run tag @s add sculkstuck
 
 # INFECT
 execute at @s[tag=infect] align xyz positioned ~0.5 ~0.5 ~0.5 run function sculk:spread/infect
@@ -34,6 +31,6 @@ execute at @s[tag=burrow] run function sculk:spread/burrow_check
 
 # End Conditions
 execute at @s unless block ~ ~ ~ #sculk:sculk_variants unless block ~ ~ ~ #sculk:infectable run scoreboard players set @s sculk_steps 0
-execute at @s[scores={sculk_steps=..0}] run function sculk:delete
+execute at @s[scores={sculk_steps=..0}] run function sculk:spread/tendril_end
 
 tag @s remove infect
