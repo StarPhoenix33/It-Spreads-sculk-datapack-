@@ -2,5 +2,5 @@
 execute if predicate sculk:sensor_chance unless entity @n[tag=sculk,tag=!tendril,distance=..1.5] run function sculk:blocks/place/sensor
 
 # Sculk Shrieker
-execute if predicate sculk:shrieker_chance unless entity @n[tag=sculk,tag=!tendril,distance=..1.5] unless entity @n[tag=sculk,tag=shrieker,distance=..6.5] run function sculk:blocks/place/shrieker
-execute if entity @n[tag=sculk,tag=node,distance=..15] if predicate sculk:shrieker_chance unless entity @n[tag=sculk,tag=!tendril,distance=..1.5] unless entity @n[tag=sculk,tag=shrieker,distance=..4.5] run function sculk:blocks/place/shrieker
+execute if predicate sculk:shrieker_chance unless entity @n[tag=sculk,tag=!tendril,distance=..1.5] unless entity @n[tag=sculk,tag=shrieker,distance=..7.5] run function sculk:blocks/place/shrieker
+execute if entity @n[tag=sculk,tag=node,distance=..15] if predicate sculk:shrieker_chance if predicate sculk:50_perc_chance unless entity @n[tag=sculk,tag=!tendril,distance=..1.5] unless entity @n[tag=sculk,tag=shrieker,distance=..4.5] run function sculk:blocks/place/shrieker
