@@ -12,6 +12,7 @@ execute if block ~ ~ ~ warped_hyphae run function sculk:spread/destroy_leaves
 
 # Tree Extension
 execute if entity @s[tag=sculkstuck] if block ~ ~ ~ warped_hyphae if predicate sculk:tree_extension_chance positioned ^ ^ ^1 if block ~ ~ ~ #replaceable run function sculk:spread/tree_extension
+execute if entity @s[tag=sculkstuck] if block ~ ~ ~ warped_hyphae if predicate sculk:tree_extension_chance positioned ^ ^1 ^ if block ~ ~ ~ #replaceable run function sculk:spread/tree_extension
 execute if entity @s[tag=sculkstuck] if block ~ ~ ~ warped_hyphae if predicate sculk:tree_extension_chance positioned ^ ^1 ^1 if block ~ ~ ~ #replaceable run function sculk:spread/tree_extension
 
 # Crying Obsidian

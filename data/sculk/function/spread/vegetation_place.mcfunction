@@ -15,5 +15,5 @@ execute if entity @n[tag=sculk,tag=node,distance=..15] if score @s temp matches 
 
 
 execute unless entity @s[tag=corruptplant] if predicate sculk:50_perc_chance run scoreboard players remove @s[scores={sculk_steps=1..}] sculk_steps 1
-execute if predicate sculk:50_perc_chance run function sculk:spread/node_infection_report with entity @s data.node
+function sculk:spread/node_infection_report with entity @s data.node
 scoreboard players add .mass HIVEMIND 1
