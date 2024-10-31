@@ -1,6 +1,6 @@
 {"values": [
     "#sculk:sculk_variants",
-    "#sculk:sculk_vegetation_replaceable",
+    "#sculk:vegetation_replaceable",
     "#sculk:infectable",
     "sculk_vein",
     "#replaceable",

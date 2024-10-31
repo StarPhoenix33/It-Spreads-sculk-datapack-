@@ -1,5 +1,4 @@
 scoreboard players add @s node_stage 1
-scoreboard players set @s infected_blocks 0
 
 $scoreboard players remove .mass HIVEMIND $(mass)
 
