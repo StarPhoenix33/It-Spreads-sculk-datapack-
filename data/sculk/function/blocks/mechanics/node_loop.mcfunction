@@ -1,7 +1,7 @@
 # Node Stage Data
 scoreboard players operation @s temp = @s node_stage
 scoreboard players add @s temp 1
-execute store result entity @s data.nodeMaxTendrils int 1 run scoreboard players get @s temp
+execute store result entity @s data.nodeMaxTendrils int 2 run scoreboard players get @s temp
 
 # Bloom (spawn tendrils)
 scoreboard players operation @s temp = .aggression HIVEMIND

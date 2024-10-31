@@ -1,6 +1,6 @@
 # Sculk Vein/Vegetation
 execute if block ~ ~1 ~ #sculk:vegetation_replaceable if predicate sculk:50_perc_chance run function sculk:spread/vegetation_place
-execute if block ~ ~ ~ sculk if block ~ ~1 ~ #sculk:growth_replaceable if predicate sculk:vegetation_place_chance unless entity @n[tag=sculk,tag=!tendril,tag=!spike,distance=..2.5] run function sculk:spread/vegetation_place
+execute if block ~ ~ ~ sculk if block ~ ~1 ~ #sculk:growth_replaceable if predicate sculk:vegetation_place_chance unless entity @n[tag=sculk,tag=!tendril,tag=!spike,distance=..2.5] unless entity @n[tag=sculk,tag=spike,distance=..0.8] run function sculk:spread/vegetation_place
 
 # Warped Wood
 execute if block ~ ~ ~ #logs_that_burn run setblock ~ ~ ~ warped_hyphae replace
