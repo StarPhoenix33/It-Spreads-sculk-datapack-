@@ -15,7 +15,8 @@ execute store result storage sculk:hivemind minSteps int 5 run scoreboard player
 execute store result storage sculk:hivemind maxSteps int 10 run scoreboard players get @n[tag=sculk,tag=node] node_stage
 function sculk:init/sculk_steps_randomizer with storage sculk:hivemind
 
-# Face away from nearby nodes (terrain-seeking optimization)
-execute unless entity @n[tag=sculk,tag=node,distance=1..100] run function sculk:init/face_away_from_nodes
+# Tp to nearby location
+function sculk:init/spread_tendril_randomly with entity @n[tag=sculk,tag=node,distance=..1] data
+execute at @s unless entity @n[tag=sculk,tag=node,distance=1..100] run function sculk:init/face_away_from_node
 
 tag @s add nodetendril

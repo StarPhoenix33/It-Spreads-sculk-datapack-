@@ -9,7 +9,4 @@ scoreboard players set @s infected_blocks 0
 
 scoreboard players add .nodecount HIVEMIND 1
 
-# Max Height Spread
-#execute store result score @s temp run data get entity @s Pos[1]
-#scoreboard players add @s temp 3
-#execute store result entity @s data.maxHeight int 1 run scoreboard players get @s temp
+function sculk:blocks/mechanics/spreadtendrils_data_update

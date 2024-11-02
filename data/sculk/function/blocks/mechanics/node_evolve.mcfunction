@@ -2,6 +2,8 @@ scoreboard players add @s node_stage 1
 
 $scoreboard players remove .mass HIVEMIND $(mass)
 
+function sculk:blocks/mechanics/spreadtendrils_data_update
+
 # Particles & Sounds
 playsound minecraft:entity.warden.sonic_charge master @a[distance=..100] ~ ~ ~ 2 0.8
 playsound minecraft:block.beacon.power_select master @a[distance=..100] ~ ~ ~ 2 0.8
