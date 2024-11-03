@@ -1,4 +1,28 @@
 {
-	"condition": "minecraft:random_chance",
-	"chance": 0.15
+	"condition": "minecraft:any_of",
+	"terms": [
+		{
+			"condition": "minecraft:random_chance",
+			"chance": 0.1
+		},
+		{
+			"condition": "minecraft:all_of",
+			"terms": [
+				{
+					"condition": "minecraft:random_chance",
+					"chance": 0.5
+				},
+				{
+					"condition": "minecraft:entity_scores",
+					"entity": "this",
+					"scores": {
+						"sculk_timer": {
+							"min": 100,
+							"max": 120
+						}
+					}
+				}
+			]
+		}
+	]
 }

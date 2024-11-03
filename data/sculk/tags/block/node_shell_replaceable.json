@@ -2,6 +2,7 @@
     "#sculk:sculk_variants",
     "#sculk:vegetation_replaceable",
     "#sculk:infectable",
+    "#sculk:pass_check",
     "sculk_vein",
     "#replaceable",
     "spore_blossom",
