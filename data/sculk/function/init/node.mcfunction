@@ -10,3 +10,8 @@ scoreboard players set @s infected_blocks 0
 scoreboard players add .nodecount HIVEMIND 1
 
 function sculk:blocks/mechanics/spreadtendrils_data_update
+
+# Forceload
+execute store result score @s temp run forceload query ~ ~
+execute if score @s temp matches 1 run tag @s add preloaded
+execute at @s[tag=!preloaded] run forceload add ~ ~

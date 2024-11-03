@@ -1,6 +1,9 @@
 # Node
 execute if entity @s[tag=node] run function sculk:blocks/mechanics/node_loop
 
+# Sensor
+execute if entity @s[tag=sensor,tag=massharvested] run tag @s remove massharvested
+
 # Melting Sculk
 execute if entity @s[tag=melt] run function sculk:blocks/mechanics/melting_sculk
 

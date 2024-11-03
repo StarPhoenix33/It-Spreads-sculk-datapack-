@@ -1,4 +1,5 @@
 $spreadplayers ~ ~ 0 $(spreadRange) under $(maxHeight) false @s
+execute at @s run tp @s ~ ~-1 ~
 execute at @s unless entity @n[tag=sculk,tag=node,distance=..20] run tp @s @n[tag=sculk,tag=node]
 execute at @s if block ~ ~-1 ~ sculk_sensor run tp @s ~ ~-1 ~
 execute at @s if block ~ ~-1 ~ sculk_shrieker run tp @s ~ ~-1 ~

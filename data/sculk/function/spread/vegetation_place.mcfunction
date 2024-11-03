@@ -1,3 +1,6 @@
+setblock ~ ~ ~ air
+execute if predicate sculk:50_perc_chance run return fail
+
 execute store result score @s temp run random value 1..100
 
 # Sculk Vein
