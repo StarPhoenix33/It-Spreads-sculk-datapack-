@@ -9,22 +9,18 @@ execute if entity @s[tag=sculkstuck] store result storage sculk:hivemind turn in
 function sculk:spread/turn with storage sculk:hivemind
 
 # Sweep for infectable blocks & tp to valid ones
-execute at @s[tag=!invertedsweep] run function sculk:spread/sweep {"a":"","b":"-"}
-execute at @s[tag=invertedsweep] run function sculk:spread/sweep {"a":"-","b":""}
+execute at @s[tag=!infect,tag=!invertedsweep] run function sculk:spread/sweep
+execute at @s[tag=!infect,tag=invertedsweep] run function sculk:spread/sweep_inverted
 execute at @s[tag=!infect,tag=!sculkstuck] run scoreboard players add @s sculk_stuck 1
 
 # Fix position
 execute at @s align xyz run tp @s ~0.5 ~0.5 ~0.5 ~ 0
 
 # Sculkstuck
-execute if score @s sculk_stuck matches 6.. run tag @s add sculkstuck
+execute if score @s sculk_stuck matches 8.. run tag @s add sculkstuck
 
 # INFECT
-execute at @s[tag=infect] align xyz positioned ~0.5 ~0.5 ~0.5 run function sculk:spread/infect
-
-# Sweep Swap
-execute if predicate sculk:sweep_swap_chance run tag @s[tag=invertedsweep] remove invertedsweep
-execute if predicate sculk:sweep_swap_chance run tag @s[tag=!invertedsweep] add invertedsweep
+execute at @s[tag=infect] align xyz positioned ~0.5 ~0.5 ~0.5 run function sculk:spread/tendril_infect
 
 # Burrow 
 execute at @s[tag=burrow] run function sculk:spread/burrow_check

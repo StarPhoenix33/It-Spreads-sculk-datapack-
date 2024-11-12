@@ -1,3 +1,5 @@
+team add Sculk
+
 scoreboard objectives add HIVEMIND dummy
 execute unless score .setup HIVEMIND matches 1 run function sculk:hivemind_setup
 

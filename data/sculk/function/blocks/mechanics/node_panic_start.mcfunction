@@ -6,6 +6,11 @@ execute unless entity @n[type=tnt,distance=..4] unless entity @n[type=tnt_mineca
 scoreboard players set @s sculk_timer 120
 effect give @a[distance=..12] darkness 10 0 false
 
+function sculk:blocks/place/tentacle
+function sculk:blocks/place/tentacle
+function sculk:blocks/place/tentacle
+
+
 playsound entity.warden.roar block @a[distance=..100] ~ ~ ~ 2 0.8
 playsound entity.warden.hurt block @a[distance=..100] ~ ~ ~ 2 0.5
 playsound entity.warden.angry block @a[distance=..100] ~ ~ ~ 2 0.5
