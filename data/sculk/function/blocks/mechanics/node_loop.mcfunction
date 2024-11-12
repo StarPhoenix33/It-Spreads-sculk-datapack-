@@ -22,6 +22,8 @@ execute at @s[scores={node_stage=6}] if score @s infected_blocks matches 7000.. 
 execute as @e[tag=sculk,tag=sensor,tag=!massharvested,limit=500,sort=nearest,distance=..50] if predicate sculk:sensor_passive_mass_chance run scoreboard players add .mass HIVEMIND 1
 tag @e[tag=sculk,tag=sensor,tag=!massharvested,limit=500,sort=nearest,distance=..50] add massharvested
 
+# Spawn Sculk Tentacles
+execute if score @s sculk_timer matches 111.. if entity @n[predicate=sculk:tentacle_target,distance=..12] if predicate sculk:50_perc_chance run function sculk:blocks/place/tentacle
 
 # Heartbeat
 playsound entity.warden.heartbeat block @a[distance=..100] ~ ~ ~ 2 1.2

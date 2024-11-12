@@ -5,9 +5,8 @@ execute unless entity @n[type=tnt,distance=..4] unless entity @n[type=tnt_mineca
 # PANIC MODE
 scoreboard players set @s sculk_timer 120
 effect give @a[distance=..12] darkness 10 0 false
+execute as @a[gamemode=!creative,gamemode=!spectator,team=!Sculk,distance=..6] run damage @s 1 sonic_boom at ~ ~ ~
 
-function sculk:blocks/place/tentacle
-function sculk:blocks/place/tentacle
 function sculk:blocks/place/tentacle
 
 
