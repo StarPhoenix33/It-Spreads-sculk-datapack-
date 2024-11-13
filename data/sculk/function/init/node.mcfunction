@@ -10,6 +10,7 @@ scoreboard players set @s infected_blocks 0
 
 
 scoreboard players add .nodecount HIVEMIND 1
+scoreboard players add .nodestages HIVEMIND 1
 
 function sculk:blocks/mechanics/spreadtendrils_data_update
 

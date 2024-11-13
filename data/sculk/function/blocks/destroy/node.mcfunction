@@ -1,5 +1,7 @@
 execute if score .nodecount HIVEMIND matches 1.. run scoreboard players remove .nodecount HIVEMIND 1
 execute unless score .aggression HIVEMIND matches 40.. run scoreboard players operation .aggression HIVEMIND += @s node_stage
+scoreboard players operation .nodestages HIVEMIND -= @s node_stage
+execute unless score .nodestages HIVEMIND matches 0.. run scoreboard players set .nodestages HIVEMIND 0
 
 particle sculk_soul ~ ~ ~ 0 0 0 0.5 50 force @a
 
