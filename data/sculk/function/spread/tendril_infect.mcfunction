@@ -13,8 +13,8 @@ execute if block ~ ~ ~ #sculk:infectable run scoreboard players set @s sculk_stu
 execute at @s[tag=sculkstuck] if block ~ ~ ~ #sculk:infectable run tag @s remove sculkstuck
 
 # Place sculk
-execute if block ~ ~ ~ #sculk:infectable run function sculk:spread/place
-execute at @s[tag=sculkstuck] if block ~ ~ ~ #sculk:sculk_variants if predicate sculk:place_attept_chance_stuck unless entity @n[tag=sculk,tag=melt,distance=..0.1] run function sculk:spread/place
+execute if block ~ ~ ~ #sculk:infectable run function sculk:spread/grow/place
+execute at @s[tag=sculkstuck] if block ~ ~ ~ #sculk:sculk_variants if predicate sculk:place_attept_chance_stuck unless entity @n[tag=sculk,tag=melt,distance=..0.1] run function sculk:spread/grow/place
 
 # Particles and Sounds
 particle sculk_charge{roll:0} ~ ~0.575 ~ 0.25 0.03 0.25 0 3 normal @a
