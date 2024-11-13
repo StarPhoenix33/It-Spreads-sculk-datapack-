@@ -10,8 +10,6 @@ scoreboard players operation .mass HIVEMIND -= @s temp
 # Spawn Node
 summon minecraft:marker ~ ~ ~ {Tags:["sculk","node","s_tick"]}
 
-execute unless score .aggression HIVEMIND matches 40.. run scoreboard players add .aggression HIVEMIND 1
-
 function sculk:visuals/particle_circle {"particle":"sculk_soul","pos":"^ ^0.2 ^","speed":02}
 function sculk:visuals/particle_circle {"particle":"sculk_soul","pos":"^ ^ ^","speed":025}
 function sculk:visuals/particle_circle {"particle":"sculk_soul","pos":"^ ^-0.2 ^","speed":02}
