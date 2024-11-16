@@ -10,6 +10,7 @@ scoreboard objectives add sculk_timer dummy
 scoreboard objectives add node_stage dummy
 scoreboard objectives add infected_blocks dummy
 scoreboard objectives add temp dummy
+scoreboard players set #3 temp 3
 scoreboard players set #10 temp 10
 scoreboard players set #20 temp 20
 scoreboard players set #100 temp 100

@@ -1,6 +1,6 @@
-execute unless score .spreaders HIVEMIND > .nodestages HIVEMIND run scoreboard players add .spreaders HIVEMIND 1
-execute if score .spreaders HIVEMIND > .nodestages HIVEMIND run function sculk:delete
-execute if score .spreaders HIVEMIND > .nodestages HIVEMIND run scoreboard players operation .spreaders HIVEMIND = .nodestages HIVEMIND
+execute unless score .spreaders HIVEMIND > .maxspreaders HIVEMIND run scoreboard players add .spreaders HIVEMIND 1
+execute if score .spreaders HIVEMIND > .maxspreaders HIVEMIND at @n[tag=sculk,tag=node] as @n[tag=sculk,tag=spreader] run function sculk:delete
+execute if score .spreaders HIVEMIND > .maxspreaders HIVEMIND run scoreboard players operation .spreaders HIVEMIND = .maxspreaders HIVEMIND
 
 execute unless block ~ ~ ~ sculk run function sculk:delete
 execute if score @s sculk_timer matches ..0 run function sculk:delete

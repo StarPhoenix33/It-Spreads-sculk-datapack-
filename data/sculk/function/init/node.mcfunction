@@ -18,3 +18,6 @@ function sculk:blocks/mechanics/spreadtendrils_data_update
 execute store result score @s temp run forceload query ~ ~
 execute if score @s temp matches 1 run tag @s add preloaded
 execute at @s[tag=!preloaded] run forceload add ~ ~
+
+# Delete spreaders
+kill @e[tag=sculk,tag=spreader,distance=..10]
