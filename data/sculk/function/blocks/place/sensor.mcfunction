@@ -10,5 +10,4 @@ scoreboard players remove .mass HIVEMIND 10
 setblock ~ ~ ~ sculk_sensor replace
 execute unless entity @n[tag=sculk,tag=sensor,distance=..8] run summon marker ~ ~ ~ {Tags:["sculk","sensor"]}
 
-scoreboard players remove @s[scores={sculk_steps=1..}] sculk_steps 1
 function sculk:spread/node_infection_report with entity @s data.node
