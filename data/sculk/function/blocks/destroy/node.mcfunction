@@ -4,8 +4,9 @@ execute unless score .aggression HIVEMIND matches 40.. run scoreboard players op
 scoreboard players operation .nodestages HIVEMIND -= @s node_stage
 execute unless score .nodestages HIVEMIND matches 0.. run scoreboard players set .nodestages HIVEMIND 0
 
-# Delete Tendrils
+# Delete Tendrils & Spreaders
 execute as @e[tag=sculk,tag=tendril] at @s run function sculk:spread/node_alive_check with entity @s data.node
+kill @e[tag=sculk,tag=spreader,distance=..30]
 
 # Remove Forceload
 execute at @s[tag=!preloaded] run forceload remove ~ ~

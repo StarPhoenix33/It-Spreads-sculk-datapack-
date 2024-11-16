@@ -6,8 +6,8 @@ data modify entity @s data.node.z set from entity @n[tag=sculk,tag=node] Pos[2]
 
 # Set Timer
 scoreboard players operation @s temp = @n[tag=sculk,tag=node,distance=..1] node_stage
-scoreboard players operation @s temp *= #20 temp
-scoreboard players add @s temp 40
+scoreboard players operation @s temp *= #10 temp
+scoreboard players add @s temp 20
 scoreboard players operation @s sculk_timer = @s temp
 
 # Set steps
@@ -18,6 +18,6 @@ function sculk:init/tendril/sculk_steps_randomizer with storage sculk:hivemind
 # Tp to nearby location/spreader
 execute if predicate sculk:50_perc_chance at @e[tag=sculk,tag=spreader,limit=1,sort=random] run function sculk:init/tendril/start_at_spreader
 execute at @s if entity @n[tag=sculk,tag=node,distance=..1] run function sculk:init/tendril/spread_tp_randomly with entity @n[tag=sculk,tag=node,distance=..1] data
-
+execute at @s unless entity @n[tag=sculk,tag=node,distance=..1] run function sculk:init/tendril/face_away_from_node
 
 tag @s add nodetendril

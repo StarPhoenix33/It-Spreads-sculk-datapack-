@@ -6,6 +6,7 @@ scoreboard players remove .mass HIVEMIND 20
 setblock ~ ~ ~ sculk_shrieker[can_summon=false] replace
 summon marker ~ ~ ~ {Tags:["sculk","shrieker","s_tick"]}
 
+execute as @s[tag=sculk,tag=tendril,tag=sculkstuck,scores={sculk_steps=5..}] run scoreboard players remove @s sculk_steps 5
 
 function sculk:spread/node_infection_report with entity @s data.node
 function sculk:spread/node_infection_report with entity @s data.node

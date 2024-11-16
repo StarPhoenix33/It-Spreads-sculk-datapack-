@@ -1,10 +1,10 @@
 # Sculk Vein
-execute if predicate sculk:veins_place_chance if block ~ ~ ~ #sculk:sculk_variants unless entity @n[tag=sculk,tag=!tendril,tag=!spreader,distance=..2.5] unless entity @n[tag=sculk,tag=node,distance=..5.5,scores={node_stage=6..7}] run function sculk:spread/grow/veins_place
+execute if predicate sculk:veins_place_chance if block ~ ~ ~ #sculk:sculk_variants unless entity @n[tag=sculk,tag=!tendril,tag=!spreader,distance=..2.5] unless entity @n[tag=sculk,tag=node,distance=..4.5] run function sculk:spread/grow/veins_place
 execute if predicate sculk:veins_place_chance if predicate sculk:50_perc_chance if block ~ ~ ~ #sculk:sculk_variants run function sculk:spread/grow/veins_remove
 
 # Vegetation
 execute if predicate sculk:50_perc_chance if block ~ ~1 ~ #sculk:vegetation_replaceable positioned ~ ~1 ~ run function sculk:spread/grow/vegetation_place
-execute if predicate sculk:vegetation_place_chance if block ~ ~ ~ sculk if block ~ ~1 ~ #sculk:growth_replaceable positioned ~ ~1 ~ unless entity @n[tag=sculk,tag=!tendril,tag=!spreader,distance=..2.5] run function sculk:spread/grow/vegetation_place
+execute if predicate sculk:vegetation_place_chance if block ~ ~ ~ sculk if block ~ ~1 ~ #sculk:growth_replaceable positioned ~ ~1 ~ unless entity @n[tag=sculk,tag=!tendril,tag=!spreader,distance=..3.5] run function sculk:spread/grow/vegetation_place
 
 # Warped Wood
 execute if block ~ ~ ~ #logs_that_burn run setblock ~ ~ ~ warped_hyphae replace
