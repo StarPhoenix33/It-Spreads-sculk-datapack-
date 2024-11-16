@@ -1,4 +1,5 @@
 scoreboard players add @s node_stage 1
+scoreboard players set @s infected_blocks 0
 scoreboard players add .nodestages HIVEMIND 1
 scoreboard players set @s sculk_timer 110
 
