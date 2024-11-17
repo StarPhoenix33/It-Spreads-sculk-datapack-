@@ -3,6 +3,7 @@ execute if entity @s[tag=nodetendril] if score @s sculk_steps matches 0 if predi
 
 # Spreader
 execute at @s[tag=!sculkstuck] if predicate sculk:spreader_spawn_chance if block ~ ~ ~ sculk unless entity @n[tag=sculk,tag=spreader,distance=..10] unless entity @n[tag=sculk,tag=node,distance=..10] run function sculk:blocks/place/spreader
+execute at @s[tag=!sculkstuck] if score .spreaders HIVEMIND matches ..2 if block ~ ~ ~ sculk unless entity @n[tag=sculk,tag=spreader,distance=..5] unless entity @n[tag=sculk,tag=node,distance=..10] run function sculk:blocks/place/spreader
 
 
 particle sculk_charge_pop ~ ~0.5 ~ 0.15 0.15 0.15 0.08 20 normal @a

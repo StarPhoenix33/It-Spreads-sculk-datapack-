@@ -6,7 +6,7 @@ execute unless score .nodestages HIVEMIND matches 0.. run scoreboard players set
 
 # Delete Tendrils & Spreaders
 execute as @e[tag=sculk,tag=tendril] at @s run function sculk:spread/node_alive_check with entity @s data.node
-execute as @e[tag=sculk,tag=spreader,distance=..30] run function sculk:delete
+execute as @e[tag=sculk,tag=spreader,distance=..20] run function sculk:delete
 execute as @e[tag=sculk,tag=tendril,distance=..20] run function sculk:delete
 
 # Remove Forceload
