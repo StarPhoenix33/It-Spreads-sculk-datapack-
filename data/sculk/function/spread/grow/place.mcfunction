@@ -28,5 +28,8 @@ execute if block ~ ~ ~ #sculk:infectable run setblock ~ ~ ~ sculk replace
 # Sculk Growth
 execute if block ~ ~ ~ sculk if block ~ ~1 ~ #sculk:growth_replaceable positioned ~ ~1 ~ run function sculk:spread/grow/growth_place
 
+# Travelling Sculk Vein Path
+execute if block ~ ~ ~ #sculk:tendril_travel_through run function sculk:spread/grow/veins_place_outer
+
 # Remove Snow
 execute if block ~ ~1 ~ snow run setblock ~ ~1 ~ air
