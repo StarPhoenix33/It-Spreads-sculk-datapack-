@@ -1,3 +1,2 @@
 summon armor_stand ~ ~ ~ {Invulnerable:1b,Small:1b,Marker:1b,Invisible:1b,NoGravity:1b,Tags:["sculk","tentacle","s_tick"]}
-execute store result score @n[tag=sculk,tag=tentacle,tag=!s_init] sculk_timer run random value 5..10
-tp @n[tag=sculk,tag=tentacle,tag=!s_init] ~ ~0.1 ~
+execute as @n[tag=sculk,tag=tentacle,tag=!s_init] run function sculk:init/tentacle

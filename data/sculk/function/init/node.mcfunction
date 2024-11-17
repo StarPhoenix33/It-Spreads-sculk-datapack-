@@ -8,7 +8,7 @@ scoreboard players set @s sculk_direction 0
 scoreboard players set @s sculk_timer 0
 scoreboard players set @s infected_blocks 0
 
-
+# Hivemind
 scoreboard players add .nodecount HIVEMIND 1
 scoreboard players add .nodestages HIVEMIND 1
 
@@ -22,3 +22,6 @@ execute at @s[tag=!preloaded] run forceload add ~ ~
 
 # Delete spreaders
 kill @e[tag=sculk,tag=spreader,distance=..10]
+
+execute align xyz positioned ~0.5 ~0.5 ~0.5 run tp @s ~ ~ ~
+tag @s add s_init

@@ -4,11 +4,12 @@ scoreboard players operation @s temp *= #500 temp
 execute unless score .mass HIVEMIND >= @s temp run return fail
 
 scoreboard players operation @s temp = .nodecount HIVEMIND
-scoreboard players operation @s temp *= #200 temp
+scoreboard players operation @s temp *= #100 temp
 scoreboard players operation .mass HIVEMIND -= @s temp
 
 # Spawn Node
 summon minecraft:marker ~ ~ ~ {Tags:["sculk","node","s_tick"]}
+execute as @n[tag=sculk,tag=node,tag=!s_init] run function sculk:init/node
 
 function sculk:visuals/particle_circle {"particle":"sculk_soul","pos":"^ ^0.2 ^","speed":02}
 function sculk:visuals/particle_circle {"particle":"sculk_soul","pos":"^ ^ ^","speed":025}
