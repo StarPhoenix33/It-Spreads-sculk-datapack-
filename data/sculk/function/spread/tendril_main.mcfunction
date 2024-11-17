@@ -30,7 +30,7 @@ execute at @s[tag=infect] align xyz positioned ~0.5 ~0.5 ~0.5 run function sculk
 # Burrow 
 execute at @s[tag=burrow] run function sculk:spread/burrow_check
 
-# End Conditions
+# END
 execute at @s unless block ~ ~ ~ #sculk:sculk_variants unless block ~ ~ ~ #sculk:infectable run scoreboard players set @s sculk_steps 0
 execute at @s[scores={sculk_steps=..0}] run function sculk:spread/tendril_end
 

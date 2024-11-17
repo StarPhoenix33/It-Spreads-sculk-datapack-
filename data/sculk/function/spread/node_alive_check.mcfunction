@@ -1,1 +1,1 @@
-$execute positioned $(x) $(y) $(z) unless entity @n[tag=sculk,tag=node,distance=..1] run kill @s
+$execute positioned $(x) $(y) $(z) unless entity @n[tag=sculk,tag=node,distance=..1] at @s run function sculk:delete

@@ -13,6 +13,7 @@ scoreboard players add .nodecount HIVEMIND 1
 scoreboard players add .nodestages HIVEMIND 1
 
 function sculk:blocks/mechanics/spreadtendrils_data_update
+function sculk:hivemind/maximum_update
 
 # Forceload
 execute store result score @s temp run forceload query ~ ~

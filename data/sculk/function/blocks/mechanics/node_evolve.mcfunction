@@ -6,6 +6,7 @@ scoreboard players set @s sculk_timer 110
 $scoreboard players remove .mass HIVEMIND $(mass)
 
 function sculk:blocks/mechanics/spreadtendrils_data_update
+function sculk:hivemind/maximum_update
 
 # Particles & Sounds
 playsound minecraft:entity.warden.sonic_charge master @a[distance=..100] ~ ~ ~ 3 0.8

@@ -16,7 +16,7 @@ execute if block ~ ~ ~ #sculk:infectable run function sculk:spread/grow/place
 execute at @s[tag=sculkstuck] if predicate sculk:33_perc_chance if block ~ ~ ~ #sculk:sculk_variants unless entity @n[tag=sculk,tag=melt,distance=..0.1] run function sculk:spread/grow/place
 
 # Particles and Sounds
-particle sculk_charge{roll:0} ~ ~0.575 ~ 0.25 0.03 0.25 0 3 normal @a
-particle sculk_charge{roll:3.1415926595897932384626433} ~ ~-0.575 ~ 0.25 0.03 0.25 0 2 normal @a
+particle sculk_charge{roll:0} ~ ~0.575 ~ 0.3 0.03 0.3 0 3 normal @a
+particle sculk_charge{roll:3.1415926595897932384626433} ~ ~-0.575 ~ 0.3 0.03 0.3 0 2 normal @a
 execute at @s[tag=!sculkstuck] run playsound block.sculk.spread block @a[distance=..100] ~ ~ ~ 1 0.8
 execute at @s[tag=sculkstuck] run playsound block.sculk.charge block @a[distance=..8] ~ ~ ~ 0.2 1

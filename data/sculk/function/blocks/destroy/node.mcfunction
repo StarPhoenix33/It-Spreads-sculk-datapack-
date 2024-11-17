@@ -6,10 +6,14 @@ execute unless score .nodestages HIVEMIND matches 0.. run scoreboard players set
 
 # Delete Tendrils & Spreaders
 execute as @e[tag=sculk,tag=tendril] at @s run function sculk:spread/node_alive_check with entity @s data.node
-kill @e[tag=sculk,tag=spreader,distance=..30]
+execute as @e[tag=sculk,tag=spreader,distance=..30] run function sculk:delete
+execute as @e[tag=sculk,tag=tendril,distance=..20] run function sculk:delete
 
 # Remove Forceload
 execute at @s[tag=!preloaded] run forceload remove ~ ~
+
+# Update Hivemind Maximums
+function sculk:hivemind/maximum_update
 
 # Particles & Sounds
 particle sculk_soul ~ ~ ~ 0 0 0 0.5 50 force @a
